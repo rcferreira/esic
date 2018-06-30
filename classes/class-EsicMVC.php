@@ -66,11 +66,11 @@ class EsicMVC
 		if ( ! $this->controlador ) {
 			
 			// Adiciona o controlador padrão
-			require_once ABSPATH . '/controllers/home-controller.php';
-			
+			//require_once ABSPATH . '/controllers/home-controller.php'; página inicial é a pagina de login
+			require_once ABSPATH . '/controllers/login-controller.php';
 			// Cria o objeto do controlador "home-controller.php"
 			// Este controlador deverá ter uma classe chamada HomeController
-			$this->controlador = new HomeController();
+			$this->controlador = new LoginController();
 			
 			// Executa o método index()
 			$this->controlador->index();
